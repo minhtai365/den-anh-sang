@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Đèn lễ hội ánh sáng ô tô</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+    <!-- send mail -->
+<script>
+    
+    function sendEmail() {
+        
+        var name = document.getElementById("name").value;
+        var email = 'daiduong.tmt@gmail.com';
+        var phone = document.getElementById("phone").value;
+        var adress = document.getElementById("adress").value;
+        var mau = document.querySelector('input[name="mau"]:checked').value;;
+    console.log(mau);
+    
+        Email.send({
+            // Host: "smtp.gmail.com",
+            Host: "smtp.elasticemail.com",
+            // Port : 2525,
+            Username: "halonghome.z2021z@gmail.com",
+            Password: "7B1C4DBEA7E1356E8037DF8383F71352BD17",
+            // 59f47959-16bd-4317-87f6-ab813bd05b11
+            // 7B1C4DBEA7E1356E8037DF8383F71352BD17
+            To: email,
+            From: "halonghome.z2021z@gmail.com",
+            Subject: "Thông báo đặt hàng từ đèn ô tô :" + name,
+            Body: '<div>Chào TiCiShop :</div><p> Bạn đã nhận được đơn đặt hàng từ : </b><ul><li>Tên:'
+                + name + '</li><li>Phone:' + phone +'</li><li>Địa chỉ:' + adress +'</li><li>Mẫu:' + mau +
+                '</li></ul><div>Cuối cùng, chúng tôi cảm ơn bạn đã tin tưởng sử dụng dịch vụ và chúc bạn thành công trông công việc</div>',
+        }).then(
+            message => alert(message)
+        );
+    }
+    </script>
+    <!-- caro -->
+   
+   <style>
+
+    .text-price{
+        font-size:30px;
+        font-weight: bold;
+    }
+    .price-old{
+        text-decoration: solid;
+    }
+    .price-new{
+        color: red;
+
+    }
+    .text-coundown{
+        font-size: 32px;
+        font-weight: bold;
+        color: red;
+        letter-spacing: 3px;
+    }
+    .text-time{
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+    }
+    .text-time div{
+        margin-inline: 3px;
+        
+    }
+    .text-tieude{
+        font-size: 21px;
+        font-weight: bold;
+    }
+    .text-tieudered{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .btn-mua{
+        height: 70px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .w-40{
+        width: 40%;
+    }
+    .box-wi{
+        margin: 0;
+        padding: 0;
+        width: 210px;
+        height: 161px;
+        left: 210px;
+        background-color: white;
+        top: 226px;
+
+    }
+    .box-text0{
+        left: 10px;
+    font-size: 17px;
+    top: 10px;
+    }
+    .box-text1{
+        left: 164px;
+    font-size: 17px;
+    top: 195px;
+    }
+    .box-text2{
+        left: 208px;
+    font-size: 17px;
+    top: 293px;
+    }
+    .box-text3{
+        left: 184px;
+    font-size: 17px;
+    top: 245px;
+    }
+    .box-text4{
+        left: 208px;
+    font-size: 17px;
+    top: 324px;
+    }
+
+
+
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <h1 class="text-center mt-4">Bộ đèn lễ hội ánh sáng</h1>
+    <h4 class="text-center">tạo phong cách riêng cho ô tô</h4>
+    <hr>
+
+    <!-- carousel -->
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/10gif-20220504021509.gif" class="d-block w-100" alt="...">
+          
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/19gif-20220504021524.gif" class="d-block w-100" alt="...">
+           
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/19gif-20220504021524.gif" class="d-block w-100" alt="...">
+         
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <div class="mt-3">
+        <h3 class="text-danger text-bold">Khuyến mãi 28% ngay hôm nay</h3>
+        <h5>Miễn phí giao hàng toàn quốc</h5>
+        <div class="d-flex justify-content-center">
+            <div class="text-price price-old">899.000đ</div>
+            <div class="price-sale">---</div>
+            <div class="text-price price-new">649.000đ</div>
+        </div>
+        <div class="bg-light d-flex align-items-center">
+            <div class="bg-primary btn-mua justify-content-center d-flex align-items-center w-40">
+                <div class="text-light">ĐẶT HÀNG NGAY</div>
+
+            </div>
+            <div  class="mx-auto">
+                <div class="text-center mb-0"><div class="text-coundown" id="demo"></div></div>
+                <div class="d-flex text-time">
+                    <div>Ngày</div>
+                    <div>Giờ</div>
+                    <div>Phút</div>
+                    <div>Giây</div>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="my-4">
+            <div class="text-center text-tieude">Thông tin bộ đèn lễ hội ánh sáng cho ô tô</div>
+            <div class="text-center text-tieude text-danger mb-4">Bảo hành 1 đổi 1 trong thời gian 1 tuần</div>
+            <div>
+                <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/10gif-20220504021509.gif"  alt="">
+            </div>
+            <div>
+                <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/o1cn011hcqaspeecfwc1l_2187824241-20220504020545.gif" alt="">
+            </div>
+            <div class="text-center text-danger text-tieude my-4">Siêu phẩm LED biến xe anh chị em thành sàn nhạc
+                di động, cuốn hút mọi ánh nhìn
+                </div>
+                <div class="position-relative">
+                    <div>
+                        <div class="mb-0 pb-0">
+                            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/-09-20220505071831.jpg" alt="">
+                        </div>
+                        <div class="mt-0 pt-0">
+                            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/4534_02jpg_q50s50jpg_webp-20220505071831.jpg" width="210" alt="">
+                        </div>
+                    </div>
+                    <div class="position-absolute text-dark box-text0">
+                        -Kích thước tấm phim : 90 x 25cm
+                    </div>
+                    <div class="position-absolute box-wi"></div>
+                    <div class="position-absolute text-dark box-text1">
+                        - Sử dụng điện 12v phù hợp với mọi dòng xe
+                    </div>
+                    <div class="position-absolute text-dark box-text2">
+                        - Tổng chiều dài dây 6m
+                    </div>
+                    <div class="position-absolute text-dark box-text3">
+                        
+                        - Dễ dàng tháo lắp, gọn nhẹ tiện sử dụng
+                    </div>
+                    <div class="position-absolute text-dark box-text4">
+                        
+                        - Độ bền cao, thời gian sử dụng hơn 10.000 giờ.
+                    </div>
+                </div>
+              
+            <div>
+                <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/19gif-20220504021524.gif" alt="">
+            </div>
+            <div>
+                <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/o1cn011hcqaspdzfp3nfc_2187824241-20220504020855.gif" alt="">
+            </div>
+        </div>
+        <div>
+            <div>
+                <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/lap-rap-den3-20220505074055.jpg" alt="">
+            </div>
+            
+        </div>
+        <div>
+            
+        <h3 class="text-center text-danger text-tieudered my-4">6 mẫu để lựa chọn</h3>
+        <div>
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/278935197_413149960244336_1164175490591752787_n-20220504033757.jpg" width="210" alt="">
+        </div>
+        <div>
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/278935197_413149960244336_1164175490591752787_n-20220504033757.jpg" width="210" alt="">
+        </div>
+        <div>
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/278935197_413149960244336_1164175490591752787_n-20220504033757.jpg" width="210" alt="">
+        </div>
+        <div>
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/278935197_413149960244336_1164175490591752787_n-20220504033757.jpg" width="210" alt="">
+        </div>
+        <div>
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/278935197_413149960244336_1164175490591752787_n-20220504033757.jpg" width="210" alt="">
+        </div>
+        <div>
+            <img style="max-width:100%;height:auto;" src="https://w.ladicdn.com/60ffba0143b2d300127aa7d8/278935197_413149960244336_1164175490591752787_n-20220504033757.jpg" width="210" alt="">
+        </div>
+        </div>
+        <div>
+            <div class="text-center text-tieudered">Thông tin đặt hàng</div>
+            <form name="contactForm" id='contact_form' method="post" action='javascript:sendEmail();'>
+                <div class="row">
+                    <div class="col-12 my-3">
+                        <!-- <div id='name_error' class='error'>Please enter your name.</div> -->
+                        <div>
+                            <input type='text' name='name' id='name' class="form-control" placeholder="Họ và tên">
+                        </div>
+
+                       
+                    </div>
+                    <div class="col-12 my-3">
+                    <div>
+                        <input type='text' name='phone' id='phone' class="form-control"
+                            placeholder="Số điện thoại">
+                        </div>
+                    </div>
+
+                    <div class="col-12 my-3">
+                        <div>
+                            <input type='text' name='adress' id='adress' class="form-control"
+                                placeholder="Địa chỉ">
+                            </div>
+                        </div>
+
+                        
+                    <div class="col-12 my-2">
+                        <p>Chọn mẫu:</p>
+                          <input type="radio" id="mau1" name="mau" value="mau1">
+                          <label for="mau1">Mẫu 1 - 649.000đ</label><br>
+                          <input type="radio" id="mau2" name="mau" disabled value="mau2">
+                          <label for="mau2">Mẫu 2 - 649.000đ (đã hết)</label><br>
+                          <input type="radio" id="mau3" name="mau" value="mau3">
+                          <label for="mau3">Mẫu 3 - 649.000đ</label><br>
+                          <input type="radio" id="mau4" name="mau" value="mau4">
+                          <label for="mau4">Mẫu 4 - 649.000đ</label><br>
+                          <input type="radio" id="mau5" disabled name="mau" value="mau5">
+                          <label for="mau5">Mẫu 5 - 649.000đ (đã hết)</label><br>
+                          <input type="radio" id="mau6" disabled name="mau" value="mau6">
+                          <label for="mau6">Mẫu 6 - 649.000đ (đã hết)</label>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="col-5 bg-primary d-flex justify-content-center">
+                                <input type='submit' id='send_message' value='ĐẶT HÀNG NGAY' class=" d-flex align-items-center btn text-light btn-line">
+                            <!-- <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div> -->
+                        </div>
+                    </div>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="text-center text-tieude">NGUYỄN THỊ CÚC</div>
+        <div class="text-center">Phụ tùng ô tô cao cấp</div>
+        <div>47 Đặng Huy Trứ, Hòa Minh, Liên Chiểu, Đà Nẵng</div>
+        <div>+84.38999.4319</div>
+        <hr>
+        <div class="text-center">Cúc Thị Nguyễn</div>
+    </footer>
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("May 6, 2022 00:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+        
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+        
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          // Display the result in the element with id="demo"
+          if(days<10) days="00";
+          if(hours<10) hours="0"+hours;
+          if(minutes<10) minutes="0"+minutes;
+          if(seconds<10) seconds="0"+seconds;
+          document.getElementById("demo").innerHTML = days + "  " + hours + "  "
+          + minutes + "  " + seconds + " ";
+        
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
