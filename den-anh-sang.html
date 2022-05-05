@@ -576,7 +576,7 @@
 
             </div>
             <div class="mx-auto">
-                <div class="text-center mb-0"><div class="text-coundown" id="demo"></div></div>
+                <div class="text-center mb-0"><div class="text-coundown" id="timer-text"></div></div>
                 <div class="d-flex text-time">
                     <div>Ngày</div>
                     <div>Giờ</div>
@@ -738,38 +738,41 @@
 
 
     <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("May 6, 2022 00:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-          // Get today's date and time
-          var now = new Date().getTime();
-        
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-        
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-          // Display the result in the element with id="demo"
-          if(days<10) days="00";
-          if(hours<10) hours="0"+hours;
-          if(minutes<10) minutes="0"+minutes;
-          if(seconds<10) seconds="0"+seconds;
-          document.getElementById("demo").innerHTML = days + "  " + hours + "  "
-          + minutes + "  " + seconds + " ";
-        
-          // If the count down is finished, write some text
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
+
+var date = new Date();
+var second = date.getSeconds();
+var minute = date.getMinutes();
+var hour = date.getHours();
+var day = date.getDay();
+var month = date.getMonth();
+var year = date.getFullYear();
+
+var leftHour = 23 - hour;
+var leftMinute = 59 - minute;
+var leftSeconds = 59 - second;
+
+
+var leftTime = (leftHour * 3600) + (leftMinute * 60) + leftSeconds;
+var timer = document.getElementById('timer-text');
+
+setInterval(updateTimer, 1000);
+
+function updateTimer() {
+    var h = Math.floor(leftTime / 3600);
+    var m = Math.floor((leftTime - (h * 3600)) / 60);
+    var s = Math.floor(leftTime % 60);
+    // s=s+1
+    var days="00";
+          if(h<10) h="0"+h;
+          if(m<10) m="0"+m;
+          if(s<10) s="0"+s;
+    timer.innerHTML =days + ":" + h + ":" + m + ":" + s;
+
+    leftTime--;
+}
+
+
+     
         </script>
 
 
